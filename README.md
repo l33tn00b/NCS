@@ -28,3 +28,6 @@ Models I tried:
 https://github.com/chuanqi305/MobileNet-SSD
 https://github.com/opencv/open_model_zoo/tree/2018/intel_models
 https://github.com/intel/Edge-optimized-models
+
+For downloading models from the Open Model Zoo at openCV one has to use the model downloader to be found at:
+https://github.com/opencv/open_model_zoo/blob/2018/model_downloader/README.md
