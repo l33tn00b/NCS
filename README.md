@@ -25,16 +25,20 @@ Don't be suprised if you encounter some obstacles. These steps pretty much apply
 
 And yes, if you have the Windows Subsystem for Linux installed: The SDK works. I have Ubuntu running in there. Setup takes a while and finally fails wwhen trying to set up udev rules. But since I don't run the NCS on my Windows machine there is no problem with that.
 
+The original NCS SDK is located in /opt/movidius/NCSDK/ncsdk-x86_64/tk/.
+
+To make our life easier, Intel decided to discard the original NCS API (but only after having had an incompatible version 2 of it) and transition to something called openVINO. Guess what, NCS and openVINO models are incompatible.
+
 Models I tried:
 
 https://github.com/chuanqi305/MobileNet-SSD
-https://github.com/opencv/open_model_zoo/tree/2018/intel_models
+https://github.com/opencv/open_model_zoo/tree/2018/intel_models (openVINO models (.bin + .xml))
 https://github.com/intel/Edge-optimized-models
 
 For downloading models from the Open Model Zoo at openCV one has to use the model downloader to be found at:
 https://github.com/opencv/open_model_zoo/blob/2018/model_downloader/README.md
 
-Then, convert the models with nccompile (located in /opt/movidius/NCSDK/ncsdk-x86_64/tk/).
+
 
 Regarding https://github.com/opencv/open_model_zoo/blob/2018/intel_models/pedestrian-detection-adas-0002/description/pedestrian-detection-adas-0002.md:
 It expects images with a dimension of 384x672. This translates to an original size of 768 x 1344.
