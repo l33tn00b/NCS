@@ -16,7 +16,9 @@ Since I run a couple of security cameras I always wanted these to be as "smart" 
 There are some sites/articles that got me started:
 
 https://www.bouvet.no/bouvet-deler/adding-ai-to-edge-devices-with-the-movidius-neural-compute-stick
+
 https://movidius.github.io/ncsdk/install.html (official documentation for the SDK)
+
 https://movidius.github.io/blog/ncs-apps-on-rpi/ (Step-by-step installation on Raspberry Pi)
 
 Don't be suprised if you encounter some obstacles. These steps pretty much apply to "clean" systems. I had to manually add packages and resolve conflicts during installation. Google is your friend...
@@ -31,3 +33,5 @@ https://github.com/intel/Edge-optimized-models
 
 For downloading models from the Open Model Zoo at openCV one has to use the model downloader to be found at:
 https://github.com/opencv/open_model_zoo/blob/2018/model_downloader/README.md
+
+Then, convert the models with nccompile (located in /opt/movidius/NCSDK/ncsdk-x86_64/tk/).
