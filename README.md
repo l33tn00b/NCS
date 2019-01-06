@@ -27,7 +27,7 @@ And yes, if you have the Windows Subsystem for Linux installed: The SDK works. I
 
 The original NCS SDK is located in /opt/movidius/NCSDK/ncsdk-x86_64/tk/.
 
-To make our life easier, Intel decided to discard the original NCS API (but only after having had an incompatible version 2 of it) and transition to something called openVINO. Guess what, NCS and openVINO models are incompatible.
+To make our life easier, Intel decided to discard the original NCS API (but only after having had an incompatible version 2 of it) and transition to something called openVINO. Guess what, NCS and openVINO models are incompatible. Migration was to be found at https://software.intel.com/en-us/articles/neural-compute-stick-ncsdk-to-openvino. But no longer. Now, it can be found at https://software.intel.com/en-us/articles/transitioning-from-intel-movidius-neural-compute-sdk-to-openvino-toolkit. Haha. 
 
 Models I tried:
 
