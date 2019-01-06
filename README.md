@@ -19,3 +19,5 @@ https://movidius.github.io/ncsdk/install.html (official documentation for the SD
 https://movidius.github.io/blog/ncs-apps-on-rpi/ (Step-by-step installation on Raspberry Pi)
 
 Don't be suprised if you encounter some obstacles. These steps pretty much apply to "clean" systems. I had to manually add packages and resolve conflicts during installation. Google is your friend...
+
+And yes, if you have the Windows Subsystem for Linux installed: The SDK works. I have Ubuntu running in there. Setup takes a while and finally fails wwhen trying to set up udev rules. But since I don't run the NCS on my Windows machine there is no problem with that.
