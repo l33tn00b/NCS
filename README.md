@@ -35,3 +35,6 @@ For downloading models from the Open Model Zoo at openCV one has to use the mode
 https://github.com/opencv/open_model_zoo/blob/2018/model_downloader/README.md
 
 Then, convert the models with nccompile (located in /opt/movidius/NCSDK/ncsdk-x86_64/tk/).
+
+Regarding https://github.com/opencv/open_model_zoo/blob/2018/intel_models/pedestrian-detection-adas-0002/description/pedestrian-detection-adas-0002.md:
+It expects images with a dimension of 384x672. This translates to an original size of 768 x 1344.
