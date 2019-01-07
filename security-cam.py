@@ -128,11 +128,19 @@ def infer_image( graph, img, frame ):
                         display_str=display_str )
 
             # Capture snapshots
-            photo = ( os.path.dirname(os.path.realpath(__file__))
-                      + "/captures/"
+            #photo = ( os.path.dirname(os.path.realpath(__file__))
+            # check if our tmp dir exists (it might have been deleted 
+            # by os because we're in /var/tmp (which is on purpose)
+            # letting this run too long will fill up the user's home pretty fast
+            # it doesn't do any harm if older annotations get deleted but
+            # we still have some older annotations if we need to look at them.
+            if not (os.path.isdir("/var/tmp/captures")):
+                 # create directory
+                 os.makedirs("/var/tmp/captures")
+            photopath = ("/var/tmp/captures/"
                       +os.path.split(ARGS.image)[1])
                       #+ cur_time + ".jpg" )
-            cv2.imwrite( photo, frame )
+            cv2.imwrite( photopath, frame )
             # also write output to fixed destination for fhem handling 
             cv2.imwrite("/var/tmp/detection.jpg", frame)
             exitcode = 2
