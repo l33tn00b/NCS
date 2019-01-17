@@ -44,3 +44,19 @@ https://github.com/opencv/open_model_zoo/blob/2018/model_downloader/README.md
 
 Regarding https://github.com/opencv/open_model_zoo/blob/2018/intel_models/pedestrian-detection-adas-0002/description/pedestrian-detection-adas-0002.md:
 It expects images with a dimension of 384x672. This translates to an original size of 768 x 1344.
+
+Setting up the new openvino on Raspberry:
+https://software.intel.com/en-us/articles/OpenVINO-Install-RaspberryPI
+
+Make sure, you have the right version ov OpenCV running. Sometimes, this might require
+sudo pip uninstall opencv-python (I had 3.3.0.10 installed, you need at least 3.4.1).
+sudo pip3 install 'opencv-python>=3.4.1'
+
+It has quite some dependencies...
+sudo apt-get install libgtk-3-dev
+sudo apt-get install libgstvideo*
+sudo apt-get install libgstreamer-plugins*
+
+And don't forget:
+source ~/inference_engine_vpu_arm/bin/setupvars.sh
+
