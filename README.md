@@ -53,10 +53,12 @@ sudo pip uninstall opencv-python (I had 3.3.0.10 installed, you need at least 3.
 sudo pip3 install 'opencv-python>=3.4.1'
 
 It has quite some dependencies...
-sudo apt-get install libgtk-3-dev
-sudo apt-get install libgstvideo*
-sudo apt-get install libgstreamer-plugins*
+sudo apt-get install libgtk-3-dev  
+sudo apt-get install libgstvideo*  
+sudo apt-get install libgstreamer-plugins*  
 
 And don't forget:
 source ~/inference_engine_vpu_arm/bin/setupvars.sh
+
+Oh, yes... Raspian Buster still has an old version of OpenCV with no dnn support. And the above pip3 install doesn't work either because there is no opencv for arm/python3.
 
